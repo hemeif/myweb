@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <!--<script src="more.js"></script>-->
+    <!--<script src="login.js"></script>-->
+</head>
+<style>
+    .box{
+        width: 300px;
+        height: 200px;
+        background: blue;
+        padding:10px 20px;
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top:50%;
+        margin-top: -100px;
+        z-index: 999;
+    }
+    .sss{
+        width: 300px;
+        height: 200px;
+        padding:10px 20px;
+        background: #fff;
+        border-radius:10px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top:50%;
+        margin-top: -100px;
+    }
+</style>
+
+<body>
+<div  class="box">
+    <p><?php echo $message ?></p>
+    
+
+</div>
+<div class="sss"></div>
+</body>
+</html>
+<script>
+    var a=document.querySelector("#a");
+    var boxs=document.querySelector(".box");
+    var spsms=document.querySelector(".sw");
+    var num=spsms.innerText;
+    var t=setInterval(function () {
+        num--;
+        if(num==1){
+           clearInterval(t);
+            location.href=a.href;
+        }
+        spsms.innerText=num;
+
+    },1000)
+</script>
